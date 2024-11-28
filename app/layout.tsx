@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
-// import Header from "@/components/Header";
+import Header from "@/components/Header";
 import { ClerkProvider } from "@clerk/nextjs";
-// import SyncUserWithConvex from "@/components/SyncUserWithConvex";
+import SyncUserWithConvex from "@/components/SyncUserWithConvex";
 import { Toaster } from "@/components/ui/toaster";
 import { ConvexReactClient } from "convex/react";
 
@@ -25,8 +25,6 @@ export const metadata: Metadata = {
 };
 
 
-// const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -39,8 +37,8 @@ export default function RootLayout({
       >
         <ConvexClientProvider>
           <ClerkProvider>
-            {/* <Header /> */}
-            {/* <SyncUserWithConvex /> */}
+            <Header />
+            <SyncUserWithConvex />
             {children}
 
             <Toaster />
