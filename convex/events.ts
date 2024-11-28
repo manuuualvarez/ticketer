@@ -40,6 +40,7 @@ export const getById = query({
   },
 });
 
+// TODO!: Important! here we create a new event
 export const create = mutation({
   args: {
     name: v.string(),
