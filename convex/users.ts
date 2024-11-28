@@ -1,6 +1,8 @@
 import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 
+
+// Check if the user has a Stripe Connect account
 export const getUsersStripeConnectId = query({
   args: { userId: v.string() },
   handler: async (ctx, args) => {
