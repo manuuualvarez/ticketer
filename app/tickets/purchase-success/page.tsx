@@ -5,7 +5,6 @@ import { redirect } from "next/navigation";
 import Ticket from "@/components/Ticket";
 
 async function TicketSuccess() {
-  console.log("TicketSuccess");
   const { userId } = await auth();
   if (!userId) redirect("/");
 
