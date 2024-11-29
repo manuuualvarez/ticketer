@@ -6,7 +6,6 @@ import Header from "@/components/Header";
 import { ClerkProvider } from "@clerk/nextjs";
 import SyncUserWithConvex from "@/components/SyncUserWithConvex";
 import { Toaster } from "@/components/ui/toaster";
-import { ConvexReactClient } from "convex/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
