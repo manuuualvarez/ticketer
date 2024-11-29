@@ -10,7 +10,7 @@ import {
   Ticket as TicketIcon,
   User,
 } from "lucide-react";
-// import QRCode from "react-qr-code";
+import QRCode from "react-qr-code";
 import Spinner from "./Spinner";
 import { useStorageUrl } from "@/lib/utils";
 import Image from "next/image";
@@ -122,7 +122,7 @@ export default function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
             <div
               className={`bg-gray-100 p-4 rounded-lg ${ticket.event.is_cancelled ? "opacity-50" : ""}`}
             >
-              {/* <QRCode value={ticket._id} className="w-32 h-32" /> */}
+              <QRCode value={ticket._id} className="w-32 h-32" />
             </div>
             <p className="mt-2 text-sm text-gray-500 break-all text-center max-w-[200px] md:max-w-full">
               Ticket ID: {ticket._id}
