@@ -42,6 +42,7 @@ export async function refundEventTickets(eventId: Id<"events">) {
           {
             payment_intent: ticket.paymentIntentId,
             reason: "requested_by_customer",
+            amount: ticket.amount! - (ticket.amount! * 0.1), // Refund 90% of the ticket amount
           },
           {
             stripeAccount: stripeConnectId,
